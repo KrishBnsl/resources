@@ -1,111 +1,99 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Resource Shelf</title>
-<style>
-/* Layout: a single 640px serif column, plain bulleted links, no chrome. */
-:root {
-  --bg: #f5f5f5;
-  --fg: #292929;
-  --muted: #767676;
-  --link: #1656cc;
-}
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --bg: #171717; --fg: #dedede; --muted: #8e8e8e; --link: #8ab4ff; color-scheme: dark;
-  }
-}
-:root[data-theme="dark"] {
-  --bg: #171717; --fg: #dedede; --muted: #8e8e8e; --link: #8ab4ff; color-scheme: dark;
-}
-body {
-  max-width: 640px;
-  margin: 0 auto;
-  padding-block: 6em 8em;
-  padding-left: max(1.5em, env(safe-area-inset-left, 0px));
-  padding-right: max(1.5em, env(safe-area-inset-right, 0px));
-  font-family: Georgia, serif;
-  font-size: 17px;
-  line-height: 1.6;
-  color: var(--fg);
-  background: var(--bg);
-}
-h1 { font-size: 1.4em; font-weight: 400; line-height: 1.6; margin: .67em 0; }
-h2 { font-size: 1em; font-weight: 400; font-style: italic; margin: 2.2em 0 .5em; color: var(--muted); }
-p { margin: 1em 0; }
-ul { margin: 0; padding-left: 2.35em; }
-a { color: var(--link); text-decoration: underline; text-decoration-thickness: 1px; overflow-wrap: anywhere; }
-a:hover { text-decoration-thickness: 2px; }
-a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
-.note { color: var(--muted); font-size: .9em; }
-</style>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Resources — Krish Bansal</title>
+  <meta name="description" content="Papers, books, courses and tools worth keeping.">
+  <link rel="stylesheet" href="/style.css">
+  <style>
+    ul.res { padding-left: 1.2rem; margin: 0.5rem 0; }
+    ul.res li { margin: 0.45rem 0; }
+    ul.res a { overflow-wrap: anywhere; }
+  </style>
 </head>
 <body>
-<main>
-<h1>Resource Shelf</h1>
-<p>Papers, books, courses and tools worth keeping, 39 links in all.</p>
+  <header class="site">
+    <div class="wrap">
+      <a class="title" href="/index.html">Krish Bansal</a>
+      <nav>
+        <a href="/index.html">Home</a>
+        <a href="/notes.html">Notes</a>
+        <a href="/reading.html">Reading</a>
+        <a href="/resources/" aria-current="page">Resources</a>
+        <a href="/about.html">About</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap">
+    <h1>Resources</h1>
+    <p class="meta">Papers, books, courses and tools worth keeping, 39 links in all.</p>
+
 <h2>Machine learning &amp; systems</h2>
-<ul>
-<li><a href="https://mlsysbook.ai/vol1/assets/downloads/Machine-Learning-Systems-Vol1.pdf" target="_blank" rel="noopener noreferrer">Introduction to Machine Learning Systems</a><span class="note"> — Volume I, PDF</span></li>
-<li><a href="https://mlsysbook.ai/vol2/assets/downloads/Machine-Learning-Systems-Vol2.pdf" target="_blank" rel="noopener noreferrer">Scaling Machine Learning Systems</a><span class="note"> — Volume II, PDF</span></li>
-<li><a href="https://arxiv.org/abs/2102.05242" target="_blank" rel="noopener noreferrer">Patterns, predictions, and actions: A story about machine learning</a><span class="note"> — arXiv 2102.05242</span></li>
+<ul class="res">
+<li><a href="https://mlsysbook.ai/vol1/assets/downloads/Machine-Learning-Systems-Vol1.pdf" target="_blank" rel="noopener noreferrer">Introduction to Machine Learning Systems</a><span class="meta"> — Volume I, PDF</span></li>
+<li><a href="https://mlsysbook.ai/vol2/assets/downloads/Machine-Learning-Systems-Vol2.pdf" target="_blank" rel="noopener noreferrer">Scaling Machine Learning Systems</a><span class="meta"> — Volume II, PDF</span></li>
+<li><a href="https://arxiv.org/abs/2102.05242" target="_blank" rel="noopener noreferrer">Patterns, predictions, and actions: A story about machine learning</a><span class="meta"> — arXiv 2102.05242</span></li>
 <li><a href="https://superstudy.guide/transformers-large-language-models/" target="_blank" rel="noopener noreferrer">Transformers &amp; Large Language Models | Super Study Guide</a></li>
 <li><a href="https://dlvr.rantai.dev/docs/part-ii/chapter-7/" target="_blank" rel="noopener noreferrer">Chapter 7 | Deep Learning via Rust</a></li>
 <li><a href="https://deep-learning-alchemy.github.io/" target="_blank" rel="noopener noreferrer">Deep Learning Alchemy | Stanford CS 312</a></li>
-<li><a href="https://cme296.stanford.edu/syllabus/" target="_blank" rel="noopener noreferrer">Syllabus</a><span class="note"> — Stanford CME296, Diffusion &amp; Large Vision Models</span></li>
-<li><a href="https://cme296.stanford.edu/slides/spring26-cme296-lecture1.pdf" target="_blank" rel="noopener noreferrer">spring26-cme296-lecture1.pdf</a><span class="note"> — Stanford CME296, spring 2026</span></li>
-<li><a href="https://www.nbi.dk/~petersen/Teaching/ML2025/Week6/ML2025_DiffusionModels.pdf" target="_blank" rel="noopener noreferrer">ML2025_DiffusionModels</a><span class="note"> — Niels Bohr Institute, ML2025 week 6</span></li>
-<li><a href="https://github.com/Param302/ML-specialization-notes/blob/master/Course%202%20-%20Advanced%20Learning%20Algorithms/Week%202%20-%20Neural%20Network%20Training/w2-ch4-Addition-neural-networks_concept.md" target="_blank" rel="noopener noreferrer">ML-specialization-notes: Week 2, Neural Network Training</a><span class="note"> — Param302/ML-specialization-notes, Course 2</span></li>
+<li><a href="https://cme296.stanford.edu/syllabus/" target="_blank" rel="noopener noreferrer">Syllabus</a><span class="meta"> — Stanford CME296, Diffusion &amp; Large Vision Models</span></li>
+<li><a href="https://cme296.stanford.edu/slides/spring26-cme296-lecture1.pdf" target="_blank" rel="noopener noreferrer">spring26-cme296-lecture1.pdf</a><span class="meta"> — Stanford CME296, spring 2026</span></li>
+<li><a href="https://www.nbi.dk/~petersen/Teaching/ML2025/Week6/ML2025_DiffusionModels.pdf" target="_blank" rel="noopener noreferrer">ML2025_DiffusionModels</a><span class="meta"> — Niels Bohr Institute, ML2025 week 6</span></li>
+<li><a href="https://github.com/Param302/ML-specialization-notes/blob/master/Course%202%20-%20Advanced%20Learning%20Algorithms/Week%202%20-%20Neural%20Network%20Training/w2-ch4-Addition-neural-networks_concept.md" target="_blank" rel="noopener noreferrer">ML-specialization-notes: Week 2, Neural Network Training</a><span class="meta"> — Param302/ML-specialization-notes, Course 2</span></li>
 <li><a href="https://aiengineeringfromscratch.com/lesson?path=phases%2F02-ml-fundamentals%2F06-knn-and-distances" target="_blank" rel="noopener noreferrer">K-Nearest Neighbors and Distances - AI Engineering from Scratch</a></li>
 </ul>
 <h2>Computer vision &amp; signals</h2>
-<ul>
+<ul class="res">
 <li><a href="https://visionbook.mit.edu/notations.html" target="_blank" rel="noopener noreferrer">Notation – Foundations of Computer Vision</a></li>
 <li><a href="https://visionbook.mit.edu/image_processing_fourier.html" target="_blank" rel="noopener noreferrer">16 Fourier Analysis – Foundations of Computer Vision</a></li>
-<li><a href="https://www.sci.utah.edu/~gerig/CS6640-F2014/Materials/CS6640_F2014_Fourier_I.pdf" target="_blank" rel="noopener noreferrer">CS6640_F2014_Fourier</a><span class="note"> — University of Utah, CS6640</span></li>
+<li><a href="https://www.sci.utah.edu/~gerig/CS6640-F2014/Materials/CS6640_F2014_Fourier_I.pdf" target="_blank" rel="noopener noreferrer">CS6640_F2014_Fourier</a><span class="meta"> — University of Utah, CS6640</span></li>
 <li><a href="https://nana.lecturer.pens.ac.id/index_files/referensi/computer_vision/Computer%20Vision.pdf" target="_blank" rel="noopener noreferrer">Computer Vision.pdf</a></li>
 </ul>
 <h2>Math &amp; algorithms</h2>
-<ul>
-<li><a href="https://courses.csail.mit.edu/6.851/spring21/" target="_blank" rel="noopener noreferrer">Advanced Data Structures (6.851)</a><span class="note"> — MIT, spring 2021</span></li>
+<ul class="res">
+<li><a href="https://courses.csail.mit.edu/6.851/spring21/" target="_blank" rel="noopener noreferrer">Advanced Data Structures (6.851)</a><span class="meta"> — MIT, spring 2021</span></li>
 <li><a href="https://pythonnumericalmethods.studentorg.berkeley.edu/notebooks/chapter15.01-Eigenvalues-and-Eigenvectors-Problem-Statement.html" target="_blank" rel="noopener noreferrer">Eigenvalues and Eigenvectors Problem Statement — Python Numerical Methods</a></li>
-<li><a href="https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf" target="_blank" rel="noopener noreferrer">bws_book.pdf</a><span class="note"> — Carnegie Mellon, 151/128</span></li>
+<li><a href="https://www.math.cmu.edu/~jmackey/151_128/bws_book.pdf" target="_blank" rel="noopener noreferrer">bws_book.pdf</a><span class="meta"> — Carnegie Mellon, 151/128</span></li>
 <li><a href="https://abakcus.com/book-lists/free-math-textbooks" target="_blank" rel="noopener noreferrer">Free Math Textbooks from University Mathematicians · Abakcus</a></li>
 </ul>
 <h2>Papers</h2>
-<ul>
-<li><a href="https://arxiv.org/pdf/2610.20399" target="_blank" rel="noopener noreferrer">Cortex: Consolidating Context into Parametric Memory</a><span class="note"> — arXiv 2610.20399</span></li>
-<li><a href="https://arxiv.org/pdf/2306.01953" target="_blank" rel="noopener noreferrer">2306.01953v3.pdf</a><span class="note"> — arXiv 2306.01953</span></li>
-<li><a href="https://arxiv.org/pdf/1512.06808" target="_blank" rel="noopener noreferrer">1512.06808v1.pdf</a><span class="note"> — arXiv 1512.06808</span></li>
+<ul class="res">
+<li><a href="https://arxiv.org/pdf/2610.20399" target="_blank" rel="noopener noreferrer">Cortex: Consolidating Context into Parametric Memory</a><span class="meta"> — arXiv 2610.20399</span></li>
+<li><a href="https://arxiv.org/pdf/2306.01953" target="_blank" rel="noopener noreferrer">2306.01953v3.pdf</a><span class="meta"> — arXiv 2306.01953</span></li>
+<li><a href="https://arxiv.org/pdf/1512.06808" target="_blank" rel="noopener noreferrer">1512.06808v1.pdf</a><span class="meta"> — arXiv 1512.06808</span></li>
 <li><a href="https://fanout.sh/ai-engineering/papers" target="_blank" rel="noopener noreferrer">Research papers: AI engineering — Fanout</a></li>
 </ul>
 <h2>Agents, harnesses &amp; LLM tooling</h2>
-<ul>
+<ul class="res">
 <li><a href="https://learnharness.ai/" target="_blank" rel="noopener noreferrer">LearnHarness — Agent harness for learning</a></li>
 <li><a href="https://aman.ai/primers/harness-engineering/" target="_blank" rel="noopener noreferrer">Aman&#x27;s AI Journal • Primers • Harness Engineering</a></li>
-<li><a href="https://github.com/jordan-gibbs/hyperresearch" target="_blank" rel="noopener noreferrer">jordan-gibbs/hyperresearch</a><span class="note"> — Convert Claude Code or Codex into a deep research agent that builds a searchable wiki</span></li>
-<li><a href="https://www.context.dev/" target="_blank" rel="noopener noreferrer">Context.dev: Web Data API for AI Agents (Scrape, Search, Crawl)</a></li>
-<li><a href="https://github.com/lyramakesmusic/neuron-explorer" target="_blank" rel="noopener noreferrer">lyramakesmusic/neuron-explorer</a><span class="note"> — Steering-first neuron explorer for Qwen3.5-4B</span></li>
+<li><a href="https://github.com/jordan-gibbs/hyperresearch" target="_blank" rel="noopener noreferrer">jordan-gibbs/hyperresearch</a><span class="meta"> — Convert Claude Code or Codex into a deep research agent that builds a searchable wiki</span></li>
+Use site header and style on resources page<li><a href="https://www.context.dev/" target="_blank" rel="noopener noreferrer">Context.dev: Web Data API for AI Agents (Scrape, Search, Crawl)</a></li>
+<li><a href="https://github.com/lyramakesmusic/neuron-explorer" target="_blank" rel="noopener noreferrer">lyramakesmusic/neuron-explorer</a><span class="meta"> — Steering-first neuron explorer for Qwen3.5-4B</span></li>
 </ul>
 <h2>Practice &amp; learning tools</h2>
-<ul>
+<ul class="res">
 <li><a href="https://clew.my/" target="_blank" rel="noopener noreferrer">Clew — learn hard things in the right order</a></li>
 <li><a href="https://www.recallx.tech/" target="_blank" rel="noopener noreferrer">Recall | Turn Solved Problems Into Lasting Intuition</a></li>
-<li><a href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener noreferrer">codecrafters-io/build-your-own-x</a><span class="note"> — Master programming by recreating your favorite technologies from scratch</span></li>
+<li><a href="https://github.com/codecrafters-io/build-your-own-x" target="_blank" rel="noopener noreferrer">codecrafters-io/build-your-own-x</a><span class="meta"> — Master programming by recreating your favorite technologies from scratch</span></li>
 </ul>
 <h2>Reading lists &amp; directories</h2>
-<ul>
-<li><a href="https://gist.github.com/veekaybee/be375ab33085102f9027853128dc5f0e" target="_blank" rel="noopener noreferrer">Normcore LLM Reads</a><span class="note"> — Anti-hype LLM reading list</span></li>
-<li><a href="https://learnaifree.fyi/#/topics/inference-optimization" target="_blank" rel="noopener noreferrer">LearnAIfree.fyi</a><span class="note"> — Inference optimization topic</span></li>
+<ul class="res">
+<li><a href="https://gist.github.com/veekaybee/be375ab33085102f9027853128dc5f0e" target="_blank" rel="noopener noreferrer">Normcore LLM Reads</a><span class="meta"> — Anti-hype LLM reading list</span></li>
+<li><a href="https://learnaifree.fyi/#/topics/inference-optimization" target="_blank" rel="noopener noreferrer">LearnAIfree.fyi</a><span class="meta"> — Inference optimization topic</span></li>
 <li><a href="https://threadlocked.xyz/blogroll/" target="_blank" rel="noopener noreferrer">Blogroll — Threadlocked</a></li>
 <li><a href="https://www.ssp.sh/" target="_blank" rel="noopener noreferrer">Data Engineering Blog &amp; Second Brain</a></li>
 <li><a href="https://pomerado.ai/" target="_blank" rel="noopener noreferrer">Pomerado</a></li>
 <li><a href="https://sirohikartik.github.io/" target="_blank" rel="noopener noreferrer">Kartik Sirohi · AI Systems &amp; Performance Engineering</a></li>
-<li><a href="https://drive.google.com/drive/u/1/folders/1_Y7oIIuB7wT-KK4a1ZxxBPJpwLn7KafY" target="_blank" rel="noopener noreferrer">Resistance Reading</a><span class="note"> — Google Drive</span></li>
+<li><a href="https://drive.google.com/drive/u/1/folders/1_Y7oIIuB7wT-KK4a1ZxxBPJpwLn7KafY" target="_blank" rel="noopener noreferrer">Resistance Reading</a><span class="meta"> — Google Drive</span></li>
 <li><a href="https://x.com/YichiZ03/status/2114019016386003198?s=20" target="_blank" rel="noopener noreferrer">Post by @YichiZ03</a></li>
 </ul>
-</main>
+  </main>
+
+  <footer class="site">
+    <div class="wrap">&copy; 2026 Krish Bansal</div>
+  </footer>
 </body>
 </html>
